@@ -8,8 +8,6 @@ import org.springframework.web.multipart.MultipartFile;
 
 import java.io.*;
 
-import org.apache.tika.exception.TikaException;
-import org.xml.sax.SAXException;
 
 @RestController
 public class FileConversionController {
