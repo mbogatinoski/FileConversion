@@ -27,7 +27,6 @@ public class FileConversionController {
                 "  <label for='targetFormat'>Target Format</label>" +
                 "  <select name='targetFormat' id='targetFormat'>" +
                 "    <option value='txt'>TXT</option>" +
-                "    <option value='doc'>DOC</option>" +
                 "    <option value='docx'>DOCX</option>" +
                 "    <option value='html'>HTML</option>" +
                 "  </select>" +
@@ -36,25 +35,23 @@ public class FileConversionController {
                 "</form>";
     }
     @PostMapping("/convert")
-    public String convert(@RequestParam("file") MultipartFile file, @RequestParam("targetFormat") String targetFormat) {
+    public void convert(@RequestParam("file") MultipartFile file, @RequestParam("targetFormat") String targetFormat) {
         try {
             switch (targetFormat) {
                 case "txt":
                     fileConversionService.convertPDFToTXT(file);
-                    return "The file has been converted to txt and downloaded!";
+                    break;
                 case "docx":
                     fileConversionService.convertPDFToDOCX(file);
-                    return "The file has been converted to docx and downloaded!";
+                    break;
                 case "html":
-                    //fileConversionService.convertPDFToHTML(file);
-                    return "The file has been converted to html and downloaded!";
+                    fileConversionService.convertPDFToHTML(file);
+                    break;
                 default:
                     throw new IllegalArgumentException("Invalid target format: " + targetFormat);
             }
-        } catch (IOException | SAXException | TikaException e) {
-            return "An error occurred while converting the file: " + e.getMessage();
         } catch (Exception e) {
-            throw new RuntimeException(e);
+            throw new RuntimeException("An error occurred while converting the file: " + e.getMessage());
         }
     }
 
