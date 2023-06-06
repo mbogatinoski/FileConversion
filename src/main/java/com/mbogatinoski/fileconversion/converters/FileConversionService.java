@@ -1,4 +1,4 @@
-package com.mbogatinoski.fileconversion;
+package com.mbogatinoski.fileconversion.converters;
 
 import org.springframework.web.multipart.MultipartFile;
 

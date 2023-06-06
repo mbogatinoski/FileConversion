@@ -1,4 +1,4 @@
-package com.mbogatinoski.fileconversion;
+package com.mbogatinoski.fileconversion.converters;
 
 import org.apache.poi.xwpf.extractor.XWPFWordExtractor;
 import org.apache.poi.xwpf.usermodel.XWPFDocument;

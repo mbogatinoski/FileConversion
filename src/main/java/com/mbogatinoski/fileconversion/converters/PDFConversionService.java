@@ -1,33 +1,26 @@
-package com.mbogatinoski.fileconversion;
+package com.mbogatinoski.fileconversion.converters;
 
 import com.aspose.pdf.Document;
 import com.aspose.pdf.SaveFormat;
-import com.mbogatinoski.fileconversion.events.FileConversionEvent;
 import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.text.PDFTextStripper;
 import org.jsoup.Jsoup;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.time.LocalDateTime;
 
 @Service
-public class PDFConversionService implements FileConversionService{
-    private final KafkaTemplate<String, FileConversionEvent> kafkaTemplate;
-    private static final String TOPIC = "file-conversion-events";
-
-    @Autowired
-    public PDFConversionService(KafkaTemplate<String, FileConversionEvent> kafkaTemplate) {
-        this.kafkaTemplate = kafkaTemplate;
-    }
-    public PDFConversionService() {
-        this.kafkaTemplate = null;
-    }
+public class PDFConversionService implements FileConversionService {
+//    private final KafkaTemplate<String, FileConversionEvent> kafkaTemplate;
+//    private static final String TOPIC = "file-conversion-events";
+//
+//    @Autowired
+//    public PDFConversionService(KafkaTemplate<String, FileConversionEvent> kafkaTemplate) {
+//        this.kafkaTemplate = kafkaTemplate;
+//    }
 
 
     public byte[] convertToTXT(MultipartFile file) throws IOException {
@@ -39,14 +32,14 @@ public class PDFConversionService implements FileConversionService{
         pdf.close();
 
         // Create the event
-        FileConversionEvent event = new FileConversionEvent();
-        event.setEventTimestamp(LocalDateTime.now());
-        event.setFileName(file.getOriginalFilename());
-        event.setFileSize(file.getSize());
-        event.setSourceFormat("pdf");
-        event.setTargetFormat("txt");
-
-        kafkaTemplate.send(TOPIC, event);
+//        FileConversionEvent event = new FileConversionEvent();
+//        event.setEventTimestamp(LocalDateTime.now());
+//        event.setFileName(file.getOriginalFilename());
+//        event.setFileSize(file.getSize());
+//        event.setSourceFormat("pdf");
+//        event.setTargetFormat("txt");
+//
+//        kafkaTemplate.send(TOPIC, event);
 
         return fileBytes;
     }

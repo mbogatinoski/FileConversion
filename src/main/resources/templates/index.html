@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>File Conversion</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.1.4/tailwind.min.css">
+    <script>
+        function updateTargetFormats() {
+            var fileInput = document.getElementById('file');
+            var targetFormatSelect = document.getElementById('targetFormat');
+            var fileExtension = getFileExtension(fileInput.value);
+            if (fileExtension === 'pdf') {
+                targetFormatSelect.innerHTML = "<option value='txt'>TXT</option>" +
+                    "<option value='docx'>DOCX</option>" +
+                    "<option value='html'>HTML</option>";
+            } else if (fileExtension === 'doc' || fileExtension === 'docx') {
+                targetFormatSelect.innerHTML = "<option value='pdf'>PDF</option>" +
+                    "<option value='txt'>TXT</option>" +
+                    "<option value='html'>HTML</option>";
+            } else {
+                targetFormatSelect.innerHTML = "<option value=''>Select a file</option>";
+            }
+        }
+
+        function getFileExtension(filename) {
+            return filename.slice((filename.lastIndexOf(".") - 1 >>> 0) + 2).toLowerCase();
+        }
+    </script>
+</head>
+<body class="bg-gray-100">
+<div class="container mx-auto py-8">
+    <h1 class="text-3xl font-bold mb-8">File Conversion</h1>
+    <form method="post" enctype="multipart/form-data" action="/convert"
+          class="bg-white rounded-lg shadow-md p-8 max-w-md mx-auto">
+        <div class="mb-4">
+            <label for="file" class="block text-gray-700 font-bold mb-2">Select a file to convert:</label>
+            <input type="file" name="file" id="file" onchange="updateTargetFormats()"
+                   class="border border-gray-400 p-2 rounded-lg w-full">
+        </div>
+        <div class="mb-4">
+            <label for="targetFormat" class="block text-gray-700 font-bold mb-2">Select the target format:</label>
+            <select name="targetFormat" id="targetFormat"
+                    class="border border-gray-400 p-2 rounded-lg w-full">
+                <option value=''></option>
+            </select>
+        </div>
+        <div class="mb-4">
+            <label for="recipientEmail" class="block text-gray-700 font-bold mb-2">Recipient Email:</label>
+            <input type="email" name="recipientEmail" id="recipientEmail" required
+                   class="border border-gray-400 p-2 rounded-lg w-full">
+        </div>
+        <div class="text-center">
+            <button type="submit"
+                    class="bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition duration-300">Convert</button>
+            <button type="submit" formaction="/convertAndEmail"
+                    class="bg-green-500 text-white py-2 px-4 rounded-lg hover:bg-green-700 transition duration-300">Convert and Email</button>
+        </div>
+    </form>
+</div>
+</body>
+</html>

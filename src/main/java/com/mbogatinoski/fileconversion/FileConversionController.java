@@ -1,20 +1,26 @@
 package com.mbogatinoski.fileconversion;
 
+import com.mbogatinoski.fileconversion.converters.DOCXConversionService;
+import com.mbogatinoski.fileconversion.converters.PDFConversionService;
 import com.mbogatinoski.fileconversion.emails.EmailSender;
+import com.mbogatinoski.fileconversion.events.FileConversionEvent;
 import jakarta.servlet.ServletResponse;
 import jakarta.servlet.http.HttpServletResponse;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.kafka.core.KafkaTemplate;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
+import java.time.LocalDateTime;
 
 @RestController
 public class FileConversionController {
+
+    @Autowired
+    private KafkaTemplate<String, FileConversionEvent> kafkaTemplate;
 
     @GetMapping("/index")
     public String index() {
@@ -22,6 +28,8 @@ public class FileConversionController {
     }
 
     @PostMapping("/convert")
+    @CrossOrigin(origins = "http://localhost:3000")
+    @ResponseBody
     public void convert(@RequestParam("file") MultipartFile file, @RequestParam("targetFormat") String targetFormat) throws IOException {
         String fileType = determineFileType(file);
         try {
@@ -46,7 +54,6 @@ public class FileConversionController {
                             response.getOutputStream().write(convertedBytes);
                             response.getOutputStream().flush();
                         }
-
                         case "html" -> {
                             byte[] convertedBytes = pdfService.convertToHTML(file);
                             ServletRequestAttributes requestAttributes = (ServletRequestAttributes) RequestContextHolder.getRequestAttributes();
@@ -93,10 +100,16 @@ public class FileConversionController {
                 }
                 default -> throw new IllegalArgumentException("Invalid file type: " + fileType);
             }
+            // create and populate the conversion event
+            FileConversionEvent conversionEvent = new FileConversionEvent(fileType, targetFormat, file.getSize(), LocalDateTime.now());
+
+            // send the conversion event to Kafka
+            kafkaTemplate.send("file-conversion", conversionEvent);
         } catch (Exception e) {
             throw new RuntimeException("An error occurred while converting the file: " + e.getMessage());
         }
     }
+
     @PostMapping("/convertAndEmail")
     public void convertAndEmail(@RequestParam("file") MultipartFile file, @RequestParam("targetFormat") String targetFormat, @RequestParam("recipientEmail") String recipientEmail) throws IOException {
         EmailSender emailSender = new EmailSender();
@@ -141,10 +154,14 @@ public class FileConversionController {
                 }
                 default -> throw new IllegalArgumentException("Invalid file type: " + fileType);
             }
+           // create and populate the conversion event
+            FileConversionEvent conversionEvent = new FileConversionEvent(fileType, targetFormat, file.getSize(), LocalDateTime.now());
+
+            // send the conversion event to Kafka
+            kafkaTemplate.send("file-conversion", conversionEvent);
         } catch (Exception e) {
             throw new RuntimeException("An error occurred while converting the file: " + e.getMessage());
         }
-
     }
     private String determineFileType(MultipartFile file) {
         String fileName = file.getOriginalFilename();
@@ -157,5 +174,4 @@ public class FileConversionController {
             default -> throw new IllegalArgumentException("Unsupported file type: " + extension);
         };
     }
-
 }

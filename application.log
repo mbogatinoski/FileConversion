@@ -1,20 +1,611 @@
-2023-03-10T20:30:39.435+02:00  INFO 124456 --- [main] c.m.f.FileConversionApplication          : Starting FileConversionApplication using Java 18.0.2 with PID 124456 (/home/martin/Downloads/file-conversion/target/classes started by martin in /home/martin/Downloads/file-conversion)
-2023-03-10T20:30:39.438+02:00  INFO 124456 --- [main] c.m.f.FileConversionApplication          : No active profile set, falling back to 1 default profile: "default"
-2023-03-10T20:30:40.177+02:00  INFO 124456 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2023-03-10T20:30:40.185+02:00  INFO 124456 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-03-10T20:30:40.185+02:00  INFO 124456 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
-2023-03-10T20:30:40.290+02:00  INFO 124456 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-03-10T20:30:40.290+02:00  INFO 124456 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 815 ms
-2023-03-10T20:30:40.602+02:00  INFO 124456 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2023-03-10T20:30:40.785+02:00  INFO 124456 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2023-03-10T20:30:40.793+02:00  INFO 124456 --- [main] c.m.f.FileConversionApplication          : Started FileConversionApplication in 1.71 seconds (process running for 2.264)
-2023-03-10T20:31:30.681+02:00  INFO 124703 --- [main] c.m.f.FileConversionApplication          : Starting FileConversionApplication using Java 18.0.2 with PID 124703 (/home/martin/Downloads/file-conversion/target/classes started by martin in /home/martin/Downloads/file-conversion)
-2023-03-10T20:31:30.683+02:00  INFO 124703 --- [main] c.m.f.FileConversionApplication          : No active profile set, falling back to 1 default profile: "default"
-2023-03-10T20:31:31.377+02:00  INFO 124703 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2023-03-10T20:31:31.385+02:00  INFO 124703 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-03-10T20:31:31.385+02:00  INFO 124703 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
-2023-03-10T20:31:31.492+02:00  INFO 124703 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-03-10T20:31:31.492+02:00  INFO 124703 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 768 ms
-2023-03-10T20:31:31.809+02:00  INFO 124703 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2023-03-10T20:31:31.984+02:00  INFO 124703 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2023-03-10T20:31:31.993+02:00  INFO 124703 --- [main] c.m.f.FileConversionApplication          : Started FileConversionApplication in 1.687 seconds (process running for 2.244)
+2023-03-13T18:08:42.708+02:00  INFO 283427 --- [main] c.m.f.FileConversionApplication          : Starting FileConversionApplication using Java 18.0.2 with PID 283427 (/home/martin/Downloads/file-conversion/target/classes started by martin in /home/martin/Downloads/file-conversion)
+2023-03-13T18:08:42.715+02:00  INFO 283427 --- [main] c.m.f.FileConversionApplication          : No active profile set, falling back to 1 default profile: "default"
+2023-03-13T18:08:43.612+02:00  INFO 283427 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-03-13T18:08:43.620+02:00  INFO 283427 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-03-13T18:08:43.621+02:00  INFO 283427 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
+2023-03-13T18:08:43.740+02:00  INFO 283427 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-03-13T18:08:43.741+02:00  INFO 283427 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 918 ms
+2023-03-13T18:08:44.084+02:00  INFO 283427 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2023-03-13T18:08:44.295+02:00  INFO 283427 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-03-13T18:08:44.303+02:00  INFO 283427 --- [main] c.m.f.FileConversionApplication          : Started FileConversionApplication in 1.965 seconds (process running for 2.663)
+2023-03-13T18:08:48.392+02:00  INFO 283427 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-03-13T18:08:48.392+02:00  INFO 283427 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-03-13T18:08:48.394+02:00  INFO 283427 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2023-03-13T18:09:00.504+02:00 ERROR 283427 --- [http-nio-8080-exec-2] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.RuntimeException: An error occurred while converting the file: Cannot invoke "org.springframework.kafka.core.KafkaTemplate.send(String, Object)" because "this.kafkaTemplate" is null] with root cause
+
+java.lang.RuntimeException: An error occurred while converting the file: Cannot invoke "org.springframework.kafka.core.KafkaTemplate.send(String, Object)" because "this.kafkaTemplate" is null
+	at com.mbogatinoski.fileconversion.FileConversionController.convert(FileConversionController.java:109) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:207) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:152) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-6.0.4.jar:6.0.4]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884) ~[spring-webmvc-6.0.4.jar:6.0.4]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797) ~[spring-webmvc-6.0.4.jar:6.0.4]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.0.4.jar:6.0.4]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1080) ~[spring-webmvc-6.0.4.jar:6.0.4]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:973) ~[spring-webmvc-6.0.4.jar:6.0.4]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011) ~[spring-webmvc-6.0.4.jar:6.0.4]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914) ~[spring-webmvc-6.0.4.jar:6.0.4]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:731) ~[tomcat-embed-core-10.1.5.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.0.4.jar:6.0.4]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:814) ~[tomcat-embed-core-10.1.5.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:223) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:177) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:119) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:400) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:859) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1734) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+
+2023-03-13T18:12:28.672+02:00  INFO 284000 --- [main] c.m.f.FileConversionApplication          : Starting FileConversionApplication using Java 18.0.2 with PID 284000 (/home/martin/Downloads/file-conversion/target/classes started by martin in /home/martin/Downloads/file-conversion)
+2023-03-13T18:12:28.674+02:00  INFO 284000 --- [main] c.m.f.FileConversionApplication          : No active profile set, falling back to 1 default profile: "default"
+2023-03-13T18:12:29.496+02:00  INFO 284000 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-03-13T18:12:29.504+02:00  INFO 284000 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-03-13T18:12:29.505+02:00  INFO 284000 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
+2023-03-13T18:12:29.636+02:00  INFO 284000 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-03-13T18:12:29.637+02:00  INFO 284000 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 923 ms
+2023-03-13T18:12:30.020+02:00  INFO 284000 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2023-03-13T18:12:30.211+02:00  INFO 284000 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-03-13T18:12:30.218+02:00  INFO 284000 --- [main] c.m.f.FileConversionApplication          : Started FileConversionApplication in 1.922 seconds (process running for 2.521)
+2023-03-13T18:12:33.940+02:00  INFO 284000 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-03-13T18:12:33.940+02:00  INFO 284000 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-03-13T18:12:33.941+02:00  INFO 284000 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-03-13T18:12:43.400+02:00  INFO 284000 --- [http-nio-8080-exec-2] o.a.k.clients.producer.ProducerConfig    : ProducerConfig values: 
+	acks = -1
+	batch.size = 16384
+	bootstrap.servers = [localhost:9092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-1
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.class = class org.apache.kafka.clients.producer.internals.DefaultPartitioner
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.springframework.kafka.support.serializer.JsonSerializer
+
+2023-03-13T18:12:43.429+02:00  INFO 284000 --- [http-nio-8080-exec-2] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=producer-1] Instantiated an idempotent producer.
+2023-03-13T18:12:43.461+02:00  WARN 284000 --- [http-nio-8080-exec-2] o.a.k.clients.producer.ProducerConfig    : The configuration 'spring.json.trusted.packages' was supplied but isn't a known config.
+2023-03-13T18:12:43.463+02:00  INFO 284000 --- [http-nio-8080-exec-2] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.2.3
+2023-03-13T18:12:43.464+02:00  INFO 284000 --- [http-nio-8080-exec-2] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 50029d3ed8ba576f
+2023-03-13T18:12:43.464+02:00  INFO 284000 --- [http-nio-8080-exec-2] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1678723963462
+2023-03-13T18:12:43.660+02:00  INFO 284000 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
+2023-03-13T18:12:43.662+02:00  WARN 284000 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-03-13T18:12:43.663+02:00  WARN 284000 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-03-13T18:12:43.765+02:00  INFO 284000 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
+2023-03-13T18:12:43.766+02:00  WARN 284000 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-03-13T18:12:43.767+02:00  WARN 284000 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-03-13T18:12:43.868+02:00  INFO 284000 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
+2023-03-13T18:12:43.868+02:00  WARN 284000 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-03-13T18:12:43.868+02:00  WARN 284000 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-03-13T18:12:44.122+02:00  INFO 284000 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
+2023-03-13T18:12:44.123+02:00  WARN 284000 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-03-13T18:12:44.123+02:00  WARN 284000 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-03-13T18:12:44.578+02:00  INFO 284000 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
+2023-03-13T18:12:44.579+02:00  WARN 284000 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-03-13T18:12:44.579+02:00  WARN 284000 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-03-13T18:12:45.289+02:00  INFO 284000 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
+2023-03-13T18:12:45.290+02:00  WARN 284000 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-03-13T18:12:45.292+02:00  WARN 284000 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-03-13T18:12:46.457+02:00  INFO 284000 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
+2023-03-13T18:12:46.458+02:00  WARN 284000 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-03-13T18:12:46.458+02:00  WARN 284000 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-03-13T18:12:47.472+02:00  INFO 284000 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
+2023-03-13T18:12:47.473+02:00  WARN 284000 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-03-13T18:12:47.474+02:00  WARN 284000 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-03-13T18:12:48.638+02:00  INFO 284000 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
+2023-03-13T18:12:48.639+02:00  WARN 284000 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-03-13T18:12:48.640+02:00  WARN 284000 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-03-13T18:12:49.704+02:00  INFO 284000 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
+2023-03-13T18:12:49.705+02:00  WARN 284000 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-03-13T18:12:49.705+02:00  WARN 284000 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-03-13T18:12:50.866+02:00  INFO 284000 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
+2023-03-13T18:12:50.867+02:00  WARN 284000 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-03-13T18:12:50.867+02:00  WARN 284000 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-03-13T18:12:51.775+02:00  INFO 284000 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
+2023-03-13T18:12:51.776+02:00  WARN 284000 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-03-13T18:12:51.777+02:00  WARN 284000 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-03-13T18:12:52.786+02:00  INFO 284000 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
+2023-03-13T18:12:52.786+02:00  WARN 284000 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-03-13T18:12:52.787+02:00  WARN 284000 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-03-13T18:12:53.695+02:00  INFO 284000 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
+2023-03-13T18:12:53.696+02:00  WARN 284000 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-03-13T18:12:53.696+02:00  WARN 284000 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-03-13T18:12:54.705+02:00  INFO 284000 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
+2023-03-13T18:12:54.706+02:00  WARN 284000 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-03-13T18:12:54.706+02:00  WARN 284000 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-03-13T18:12:55.717+02:00  INFO 284000 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
+2023-03-13T18:12:55.718+02:00  WARN 284000 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-03-13T18:12:55.719+02:00  WARN 284000 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-03-13T18:12:56.731+02:00  INFO 284000 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
+2023-03-13T18:12:56.732+02:00  WARN 284000 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-03-13T18:12:56.732+02:00  WARN 284000 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-03-13T18:12:57.893+02:00  INFO 284000 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
+2023-03-13T18:12:57.894+02:00  WARN 284000 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-03-13T18:12:57.895+02:00  WARN 284000 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-03-13T18:12:59.056+02:00  INFO 284000 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
+2023-03-13T18:12:59.056+02:00  WARN 284000 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-03-13T18:12:59.057+02:00  WARN 284000 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-03-13T18:12:59.964+02:00  INFO 284000 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
+2023-03-13T18:12:59.965+02:00  WARN 284000 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-03-13T18:12:59.965+02:00  WARN 284000 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-03-13T18:13:00.971+02:00  INFO 284000 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
+2023-03-13T18:13:00.971+02:00  WARN 284000 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-03-13T18:13:00.971+02:00  WARN 284000 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-03-13T18:13:01.878+02:00  INFO 284000 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
+2023-03-13T18:13:01.880+02:00  WARN 284000 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-03-13T18:13:01.881+02:00  WARN 284000 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-03-13T18:13:02.889+02:00  INFO 284000 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
+2023-03-13T18:13:02.890+02:00  WARN 284000 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-03-13T18:13:02.890+02:00  WARN 284000 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-03-13T18:13:03.950+02:00  INFO 284000 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
+2023-03-13T18:13:03.951+02:00  WARN 284000 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-03-13T18:13:03.952+02:00  WARN 284000 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-03-13T18:13:05.112+02:00  INFO 284000 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
+2023-03-13T18:13:05.114+02:00  WARN 284000 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-03-13T18:13:05.114+02:00  WARN 284000 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-03-13T18:13:06.272+02:00  INFO 284000 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
+2023-03-13T18:13:06.272+02:00  WARN 284000 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-03-13T18:13:06.273+02:00  WARN 284000 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-03-13T18:13:07.231+02:00  INFO 284000 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
+2023-03-13T18:13:07.231+02:00  WARN 284000 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-03-13T18:13:07.232+02:00  WARN 284000 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-03-13T18:13:08.289+02:00  INFO 284000 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
+2023-03-13T18:13:08.289+02:00  WARN 284000 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-03-13T18:13:08.290+02:00  WARN 284000 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-03-13T18:13:09.247+02:00  INFO 284000 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
+2023-03-13T18:13:09.248+02:00  WARN 284000 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-03-13T18:13:09.249+02:00  WARN 284000 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-03-13T18:13:10.256+02:00  INFO 284000 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
+2023-03-13T18:13:10.257+02:00  WARN 284000 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-03-13T18:13:10.257+02:00  WARN 284000 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-03-13T18:13:11.264+02:00  INFO 284000 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
+2023-03-13T18:13:11.265+02:00  WARN 284000 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-03-13T18:13:11.265+02:00  WARN 284000 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-03-13T18:13:12.322+02:00  INFO 284000 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
+2023-03-13T18:13:12.323+02:00  WARN 284000 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-03-13T18:13:12.324+02:00  WARN 284000 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-03-13T18:13:13.481+02:00  INFO 284000 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
+2023-03-13T18:13:13.482+02:00  WARN 284000 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-03-13T18:13:13.483+02:00  WARN 284000 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-03-13T18:13:14.490+02:00  INFO 284000 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
+2023-03-13T18:13:14.491+02:00  WARN 284000 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-03-13T18:13:14.491+02:00  WARN 284000 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-03-13T18:13:15.448+02:00  INFO 284000 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
+2023-03-13T18:13:15.449+02:00  WARN 284000 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-03-13T18:13:15.450+02:00  WARN 284000 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-03-13T18:13:16.608+02:00  INFO 284000 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
+2023-03-13T18:13:16.609+02:00  WARN 284000 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-03-13T18:13:16.609+02:00  WARN 284000 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-03-13T18:13:17.566+02:00  INFO 284000 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
+2023-03-13T18:13:17.566+02:00  WARN 284000 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-03-13T18:13:17.567+02:00  WARN 284000 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-03-13T18:13:18.574+02:00  INFO 284000 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
+2023-03-13T18:13:18.575+02:00  WARN 284000 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-03-13T18:13:18.575+02:00  WARN 284000 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-03-13T18:13:19.481+02:00  INFO 284000 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
+2023-03-13T18:13:19.482+02:00  WARN 284000 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-03-13T18:13:19.486+02:00  WARN 284000 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-03-13T18:13:20.342+02:00  INFO 284000 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
+2023-03-13T18:13:20.343+02:00  WARN 284000 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-03-13T18:13:20.343+02:00  WARN 284000 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-03-13T18:13:21.450+02:00  INFO 284000 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
+2023-03-13T18:13:21.451+02:00  WARN 284000 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-03-13T18:13:21.451+02:00  WARN 284000 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-03-13T18:13:22.358+02:00  INFO 284000 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
+2023-03-13T18:13:22.359+02:00  WARN 284000 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-03-13T18:13:22.360+02:00  WARN 284000 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-03-13T18:13:23.416+02:00  INFO 284000 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
+2023-03-13T18:13:23.417+02:00  WARN 284000 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-03-13T18:13:23.418+02:00  WARN 284000 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-03-13T18:13:24.274+02:00  INFO 284000 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
+2023-03-13T18:13:24.275+02:00  WARN 284000 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-03-13T18:13:24.275+02:00  WARN 284000 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-03-13T18:13:25.230+02:00  INFO 284000 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
+2023-03-13T18:13:25.231+02:00  WARN 284000 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-03-13T18:13:25.231+02:00  WARN 284000 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-03-13T18:13:26.086+02:00  INFO 284000 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
+2023-03-13T18:13:26.087+02:00  WARN 284000 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-03-13T18:13:26.088+02:00  WARN 284000 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-03-13T18:13:27.094+02:00  INFO 284000 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
+2023-03-13T18:13:27.095+02:00  WARN 284000 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-03-13T18:13:27.096+02:00  WARN 284000 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-03-13T18:13:28.201+02:00  INFO 284000 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
+2023-03-13T18:13:28.202+02:00  WARN 284000 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-03-13T18:13:28.202+02:00  WARN 284000 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-03-13T18:13:29.309+02:00  INFO 284000 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
+2023-03-13T18:13:29.310+02:00  WARN 284000 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-03-13T18:13:29.311+02:00  WARN 284000 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-03-13T18:13:30.216+02:00  INFO 284000 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
+2023-03-13T18:13:30.217+02:00  WARN 284000 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-03-13T18:13:30.218+02:00  WARN 284000 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-03-13T18:13:31.172+02:00  INFO 284000 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
+2023-03-13T18:13:31.173+02:00  WARN 284000 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-03-13T18:13:31.173+02:00  WARN 284000 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-03-13T18:13:32.025+02:00  INFO 284000 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
+2023-03-13T18:13:32.026+02:00  WARN 284000 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-03-13T18:13:32.026+02:00  WARN 284000 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-03-13T18:13:32.895+02:00  INFO 284000 --- [SpringApplicationShutdownHook] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=producer-1] Closing the Kafka producer with timeoutMillis = 30000 ms.
+2023-03-13T18:13:32.899+02:00  INFO 284000 --- [SpringApplicationShutdownHook] o.apache.kafka.common.metrics.Metrics    : Metrics scheduler closed
+2023-03-13T18:13:32.900+02:00  INFO 284000 --- [SpringApplicationShutdownHook] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2023-03-13T18:13:32.900+02:00  INFO 284000 --- [SpringApplicationShutdownHook] o.apache.kafka.common.metrics.Metrics    : Metrics reporters closed
+2023-03-13T18:13:32.901+02:00  INFO 284000 --- [SpringApplicationShutdownHook] o.a.kafka.common.utils.AppInfoParser     : App info kafka.producer for producer-1 unregistered
+2023-03-13T18:13:35.623+02:00  INFO 284263 --- [main] c.m.f.FileConversionApplication          : Starting FileConversionApplication using Java 18.0.2 with PID 284263 (/home/martin/Downloads/file-conversion/target/classes started by martin in /home/martin/Downloads/file-conversion)
+2023-03-13T18:13:35.625+02:00  INFO 284263 --- [main] c.m.f.FileConversionApplication          : No active profile set, falling back to 1 default profile: "default"
+2023-03-13T18:13:36.335+02:00  INFO 284263 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-03-13T18:13:36.343+02:00  INFO 284263 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-03-13T18:13:36.343+02:00  INFO 284263 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
+2023-03-13T18:13:36.467+02:00  INFO 284263 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-03-13T18:13:36.468+02:00  INFO 284263 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 802 ms
+2023-03-13T18:13:36.884+02:00  INFO 284263 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2023-03-13T18:13:37.222+02:00  INFO 284263 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-03-13T18:13:37.236+02:00  INFO 284263 --- [main] c.m.f.FileConversionApplication          : Started FileConversionApplication in 1.947 seconds (process running for 2.504)
+2023-03-13T18:13:39.738+02:00  INFO 284263 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-03-13T18:13:39.738+02:00  INFO 284263 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-03-13T18:13:39.739+02:00  INFO 284263 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-03-13T18:14:02.698+02:00  INFO 284263 --- [http-nio-8080-exec-2] o.a.k.clients.producer.ProducerConfig    : ProducerConfig values: 
+	acks = -1
+	batch.size = 16384
+	bootstrap.servers = [localhost:9092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = file-conversion-producer-1
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.class = class org.apache.kafka.clients.producer.internals.DefaultPartitioner
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
+
+2023-03-13T18:14:02.725+02:00  INFO 284263 --- [http-nio-8080-exec-2] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=file-conversion-producer-1] Instantiated an idempotent producer.
+2023-03-13T18:14:02.763+02:00  INFO 284263 --- [http-nio-8080-exec-2] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.2.3
+2023-03-13T18:14:02.764+02:00  INFO 284263 --- [http-nio-8080-exec-2] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 50029d3ed8ba576f
+2023-03-13T18:14:02.765+02:00  INFO 284263 --- [http-nio-8080-exec-2] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1678724042761
+2023-03-13T18:14:02.966+02:00  INFO 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Node -1 disconnected.
+2023-03-13T18:14:02.968+02:00  WARN 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-03-13T18:14:02.968+02:00  WARN 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-03-13T18:14:03.072+02:00  INFO 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Node -1 disconnected.
+2023-03-13T18:14:03.072+02:00  WARN 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-03-13T18:14:03.073+02:00  WARN 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-03-13T18:14:03.225+02:00  INFO 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Node -1 disconnected.
+2023-03-13T18:14:03.225+02:00  WARN 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-03-13T18:14:03.225+02:00  WARN 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-03-13T18:14:03.477+02:00  INFO 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Node -1 disconnected.
+2023-03-13T18:14:03.477+02:00  WARN 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-03-13T18:14:03.478+02:00  WARN 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-03-13T18:14:03.933+02:00  INFO 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Node -1 disconnected.
+2023-03-13T18:14:03.933+02:00  WARN 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-03-13T18:14:03.934+02:00  WARN 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-03-13T18:14:04.745+02:00  INFO 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Node -1 disconnected.
+2023-03-13T18:14:04.746+02:00  WARN 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-03-13T18:14:04.747+02:00  WARN 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-03-13T18:14:05.655+02:00  INFO 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Node -1 disconnected.
+2023-03-13T18:14:05.657+02:00  WARN 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-03-13T18:14:05.657+02:00  WARN 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-03-13T18:14:06.617+02:00  INFO 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Node -1 disconnected.
+2023-03-13T18:14:06.618+02:00  WARN 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-03-13T18:14:06.619+02:00  WARN 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-03-13T18:14:07.782+02:00  INFO 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Node -1 disconnected.
+2023-03-13T18:14:07.783+02:00  WARN 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-03-13T18:14:07.784+02:00  WARN 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-03-13T18:14:08.644+02:00  INFO 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Node -1 disconnected.
+2023-03-13T18:14:08.645+02:00  WARN 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-03-13T18:14:08.646+02:00  WARN 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-03-13T18:14:09.708+02:00  INFO 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Node -1 disconnected.
+2023-03-13T18:14:09.709+02:00  WARN 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-03-13T18:14:09.709+02:00  WARN 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-03-13T18:14:10.619+02:00  INFO 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Node -1 disconnected.
+2023-03-13T18:14:10.620+02:00  WARN 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-03-13T18:14:10.621+02:00  WARN 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-03-13T18:14:11.682+02:00  INFO 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Node -1 disconnected.
+2023-03-13T18:14:11.683+02:00  WARN 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-03-13T18:14:11.683+02:00  WARN 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-03-13T18:14:12.742+02:00  INFO 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Node -1 disconnected.
+2023-03-13T18:14:12.742+02:00  WARN 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-03-13T18:14:12.742+02:00  WARN 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-03-13T18:14:13.905+02:00  INFO 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Node -1 disconnected.
+2023-03-13T18:14:13.906+02:00  WARN 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-03-13T18:14:13.907+02:00  WARN 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-03-13T18:14:15.068+02:00  INFO 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Node -1 disconnected.
+2023-03-13T18:14:15.069+02:00  WARN 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-03-13T18:14:15.070+02:00  WARN 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-03-13T18:14:15.979+02:00  INFO 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Node -1 disconnected.
+2023-03-13T18:14:15.980+02:00  WARN 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-03-13T18:14:15.980+02:00  WARN 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-03-13T18:14:17.040+02:00  INFO 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Node -1 disconnected.
+2023-03-13T18:14:17.041+02:00  WARN 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-03-13T18:14:17.042+02:00  WARN 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-03-13T18:14:18.252+02:00  INFO 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Node -1 disconnected.
+2023-03-13T18:14:18.253+02:00  WARN 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-03-13T18:14:18.257+02:00  WARN 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-03-13T18:14:19.264+02:00  INFO 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Node -1 disconnected.
+2023-03-13T18:14:19.264+02:00  WARN 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-03-13T18:14:19.264+02:00  WARN 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-03-13T18:14:20.372+02:00  INFO 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Node -1 disconnected.
+2023-03-13T18:14:20.373+02:00  WARN 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-03-13T18:14:20.373+02:00  WARN 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-03-13T18:14:21.479+02:00  INFO 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Node -1 disconnected.
+2023-03-13T18:14:21.480+02:00  WARN 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-03-13T18:14:21.480+02:00  WARN 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-03-13T18:14:22.435+02:00  INFO 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Node -1 disconnected.
+2023-03-13T18:14:22.435+02:00  WARN 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-03-13T18:14:22.435+02:00  WARN 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-03-13T18:14:23.495+02:00  INFO 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Node -1 disconnected.
+2023-03-13T18:14:23.495+02:00  WARN 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-03-13T18:14:23.495+02:00  WARN 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-03-13T18:14:24.652+02:00  INFO 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Node -1 disconnected.
+2023-03-13T18:14:24.654+02:00  WARN 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-03-13T18:14:24.654+02:00  WARN 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-03-13T18:14:25.659+02:00  INFO 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Node -1 disconnected.
+2023-03-13T18:14:25.660+02:00  WARN 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-03-13T18:14:25.660+02:00  WARN 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-03-13T18:14:26.564+02:00  INFO 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Node -1 disconnected.
+2023-03-13T18:14:26.564+02:00  WARN 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-03-13T18:14:26.564+02:00  WARN 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-03-13T18:14:27.470+02:00  INFO 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Node -1 disconnected.
+2023-03-13T18:14:27.471+02:00  WARN 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-03-13T18:14:27.471+02:00  WARN 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-03-13T18:14:28.527+02:00  INFO 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Node -1 disconnected.
+2023-03-13T18:14:28.527+02:00  WARN 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-03-13T18:14:28.527+02:00  WARN 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-03-13T18:14:29.481+02:00  INFO 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Node -1 disconnected.
+2023-03-13T18:14:29.481+02:00  WARN 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-03-13T18:14:29.481+02:00  WARN 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-03-13T18:14:30.385+02:00  INFO 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Node -1 disconnected.
+2023-03-13T18:14:30.386+02:00  WARN 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-03-13T18:14:30.386+02:00  WARN 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-03-13T18:14:31.441+02:00  INFO 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Node -1 disconnected.
+2023-03-13T18:14:31.441+02:00  WARN 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-03-13T18:14:31.441+02:00  WARN 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-03-13T18:14:32.497+02:00  INFO 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Node -1 disconnected.
+2023-03-13T18:14:32.498+02:00  WARN 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-03-13T18:14:32.499+02:00  WARN 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-03-13T18:14:33.455+02:00  INFO 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Node -1 disconnected.
+2023-03-13T18:14:33.455+02:00  WARN 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-03-13T18:14:33.455+02:00  WARN 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-03-13T18:14:34.612+02:00  INFO 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Node -1 disconnected.
+2023-03-13T18:14:34.613+02:00  WARN 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-03-13T18:14:34.613+02:00  WARN 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-03-13T18:14:35.671+02:00  INFO 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Node -1 disconnected.
+2023-03-13T18:14:35.672+02:00  WARN 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-03-13T18:14:35.672+02:00  WARN 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-03-13T18:14:36.728+02:00  INFO 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Node -1 disconnected.
+2023-03-13T18:14:36.729+02:00  WARN 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-03-13T18:14:36.730+02:00  WARN 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-03-13T18:14:37.888+02:00  INFO 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Node -1 disconnected.
+2023-03-13T18:14:37.889+02:00  WARN 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-03-13T18:14:37.889+02:00  WARN 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-03-13T18:14:38.845+02:00  INFO 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Node -1 disconnected.
+2023-03-13T18:14:38.846+02:00  WARN 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-03-13T18:14:38.847+02:00  WARN 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-03-13T18:14:39.904+02:00  INFO 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Node -1 disconnected.
+2023-03-13T18:14:39.905+02:00  WARN 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-03-13T18:14:39.906+02:00  WARN 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-03-13T18:14:40.913+02:00  INFO 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Node -1 disconnected.
+2023-03-13T18:14:40.914+02:00  WARN 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-03-13T18:14:40.914+02:00  WARN 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-03-13T18:14:41.871+02:00  INFO 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Node -1 disconnected.
+2023-03-13T18:14:41.872+02:00  WARN 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-03-13T18:14:41.875+02:00  WARN 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-03-13T18:14:42.781+02:00  INFO 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Node -1 disconnected.
+2023-03-13T18:14:42.781+02:00  WARN 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-03-13T18:14:42.782+02:00  WARN 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-03-13T18:14:43.839+02:00  INFO 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Node -1 disconnected.
+2023-03-13T18:14:43.839+02:00  WARN 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-03-13T18:14:43.839+02:00  WARN 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-03-13T18:14:44.896+02:00  INFO 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Node -1 disconnected.
+2023-03-13T18:14:44.896+02:00  WARN 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-03-13T18:14:44.897+02:00  WARN 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-03-13T18:14:45.854+02:00  INFO 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Node -1 disconnected.
+2023-03-13T18:14:45.855+02:00  WARN 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-03-13T18:14:45.855+02:00  WARN 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-03-13T18:14:46.811+02:00  INFO 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Node -1 disconnected.
+2023-03-13T18:14:46.812+02:00  WARN 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-03-13T18:14:46.812+02:00  WARN 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-03-13T18:14:47.866+02:00  INFO 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Node -1 disconnected.
+2023-03-13T18:14:47.866+02:00  WARN 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-03-13T18:14:47.866+02:00  WARN 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-03-13T18:14:48.972+02:00  INFO 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Node -1 disconnected.
+2023-03-13T18:14:48.973+02:00  WARN 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-03-13T18:14:48.973+02:00  WARN 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-03-13T18:14:50.131+02:00  INFO 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Node -1 disconnected.
+2023-03-13T18:14:50.131+02:00  WARN 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-03-13T18:14:50.132+02:00  WARN 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-03-13T18:14:51.290+02:00  INFO 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Node -1 disconnected.
+2023-03-13T18:14:51.292+02:00  WARN 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-03-13T18:14:51.292+02:00  WARN 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-03-13T18:14:52.398+02:00  INFO 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Node -1 disconnected.
+2023-03-13T18:14:52.398+02:00  WARN 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-03-13T18:14:52.398+02:00  WARN 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-03-13T18:14:53.504+02:00  INFO 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Node -1 disconnected.
+2023-03-13T18:14:53.504+02:00  WARN 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-03-13T18:14:53.505+02:00  WARN 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-03-13T18:14:54.361+02:00  INFO 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Node -1 disconnected.
+2023-03-13T18:14:54.361+02:00  WARN 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-03-13T18:14:54.362+02:00  WARN 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-03-13T18:14:55.418+02:00  INFO 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Node -1 disconnected.
+2023-03-13T18:14:55.418+02:00  WARN 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-03-13T18:14:55.418+02:00  WARN 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-03-13T18:14:56.274+02:00  INFO 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Node -1 disconnected.
+2023-03-13T18:14:56.275+02:00  WARN 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-03-13T18:14:56.275+02:00  WARN 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-03-13T18:14:57.380+02:00  INFO 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Node -1 disconnected.
+2023-03-13T18:14:57.381+02:00  WARN 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-03-13T18:14:57.381+02:00  WARN 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-03-13T18:14:58.336+02:00  INFO 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Node -1 disconnected.
+2023-03-13T18:14:58.337+02:00  WARN 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-03-13T18:14:58.337+02:00  WARN 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2023-03-13T18:14:59.244+02:00  INFO 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Node -1 disconnected.
+2023-03-13T18:14:59.245+02:00  WARN 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2023-03-13T18:14:59.245+02:00  WARN 284263 --- [kafka-producer-network-thread | file-conversion-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=file-conversion-producer-1] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected

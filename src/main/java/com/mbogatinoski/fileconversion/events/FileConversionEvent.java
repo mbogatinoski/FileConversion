@@ -4,20 +4,11 @@ import java.time.Instant;
 import java.time.LocalDateTime;
 
 public class FileConversionEvent {
-    private String fileName;
     private long fileSize;
     private String sourceFormat;
     private String targetFormat;
 
     private LocalDateTime eventTimestamp;
-    public String getFileName() {
-        return fileName;
-    }
-
-    public void setFileName(String fileName) {
-        this.fileName = fileName;
-    }
-
     public String getSourceFormat() {
         return sourceFormat;
     }
@@ -35,7 +26,7 @@ public class FileConversionEvent {
     }
 
     public void setFileSize(long fileSize) {
-        fileSize = fileSize;
+        this.fileSize = fileSize;
     }
 
     public FileConversionEvent() {
@@ -46,8 +37,7 @@ public class FileConversionEvent {
     }
 
 
-    public FileConversionEvent(String fileName, String sourceFormat, String targetFormat, long fileSize) {
-        this.fileName = fileName;
+    public FileConversionEvent(String sourceFormat, String targetFormat, long fileSize, LocalDateTime eventTimestamp) {
         this.sourceFormat = sourceFormat;
         this.targetFormat = targetFormat;
         this.fileSize = fileSize;
